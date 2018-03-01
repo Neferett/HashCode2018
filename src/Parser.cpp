@@ -63,12 +63,18 @@ void Parser::processAlgo()
 {
 	std::ofstream output;
 	int j = 0;
+	int base = rides / vehicules;
 
 	output.open(std::string("outputs/out") + filename[6], std::fstream::out);
 	for (int i = 0; i < this->vehicules; ++i)
 	{
-		output << 3 << " " << j << " " << j + 1 << " " << j + 2 << std::endl;
-		j += 3;
+		output << base;
+		for (int k = 0; k < base; ++k)
+		{
+			output << " " << j + k;
+		}
+		output << std::endl;
+		j += base;
 	}
 	output.close();
 }
