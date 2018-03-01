@@ -14,7 +14,9 @@ CXXFLAGS += -W -Wextra -Wall -Werror -std=c++14 -g3
 
 NAME = hashcode
 
-SRCS =  src/main.cpp
+SRCS =  src/main.cpp \
+	src/Parser.cpp \
+	src/Ride.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
